@@ -1,0 +1,2 @@
+abstra==3.15.2
+cryptography==41.0.7
