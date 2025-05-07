@@ -1,0 +1,142 @@
+{
+  "tables": [
+    {
+      "id": "3f4442d6-4ba6-44bf-a0d3-4a7497d74dcd",
+      "name": "credential_views",
+      "columns": [
+        {
+          "id": "9c5f2f93-3009-4bf1-8cb1-86af7a5bb0ed",
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "unique": true,
+          "primaryKey": true,
+          "default": "gen_random_uuid()"
+        },
+        {
+          "id": "0be25d65-655b-4411-8862-2f63579c2eaa",
+          "name": "created_at",
+          "type": "timestamp",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false,
+          "default": "now()"
+        },
+        {
+          "id": "0dba6b97-5b43-4f74-b7a3-8cacdcc507aa",
+          "name": "email",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "8449779c-c9bd-44cc-a050-6eb1e2881abf",
+          "name": "credential_id",
+          "type": "uuid",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false,
+          "foreignKey": {
+            "columnId": "22006859-1fa6-4974-825e-0e9070f372bf"
+          }
+        }
+      ],
+      "data": []
+    },
+    {
+      "id": "0e38ad3c-b29d-431e-95bc-afb0cb5851e6",
+      "name": "credentials",
+      "columns": [
+        {
+          "id": "22006859-1fa6-4974-825e-0e9070f372bf",
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "unique": true,
+          "primaryKey": true,
+          "default": "gen_random_uuid()"
+        },
+        {
+          "id": "c8b0db8b-47ea-43aa-9fde-788db88576b8",
+          "name": "created_at",
+          "type": "timestamp",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false,
+          "default": "now()"
+        },
+        {
+          "id": "857aa51b-623a-4e00-8d76-39b3139f32fb",
+          "name": "name",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "87b457ff-7cf7-494f-9277-e94c141ca166",
+          "name": "public_part",
+          "type": "varchar",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false,
+          "default": "''::character varying"
+        },
+        {
+          "id": "9ed41b1c-b458-4dcf-964c-708702d4c0fa",
+          "name": "private_part_enc",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "adc2a081-ee51-4a09-8de5-fc4d5b6172d2",
+          "name": "key_id",
+          "type": "uuid",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false,
+          "foreignKey": {
+            "columnId": "2160b0fd-1470-4a18-9701-3fa973fbc219"
+          }
+        }
+      ],
+      "data": []
+    },
+    {
+      "id": "c221ae44-b2ff-406a-a385-412ff0a1f367",
+      "name": "fernet_keys",
+      "columns": [
+        {
+          "id": "2160b0fd-1470-4a18-9701-3fa973fbc219",
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "unique": true,
+          "primaryKey": true,
+          "default": "gen_random_uuid()"
+        },
+        {
+          "id": "382c2178-f1dd-4311-8c8c-747517cff478",
+          "name": "created_at",
+          "type": "timestamp",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false,
+          "default": "now()"
+        },
+        {
+          "id": "4f5990a3-6e3d-4891-8c93-419bccca233b",
+          "name": "key_enc",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        }
+      ],
+      "data": []
+    }
+  ]
+}
