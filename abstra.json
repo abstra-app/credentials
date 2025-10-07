@@ -18,109 +18,107 @@
   },
   "jobs": [
     {
-      "id": "4402e439-3498-434a-ab21-46549ec7592d",
-      "file": "job_weekly_refresh.py",
-      "title": "Weekly refresh",
-      "schedule": "0 0 * * 6",
       "workflow_position": [
         735.0,
         420.0
       ],
-      "transitions": []
+      "id": "4402e439-3498-434a-ab21-46549ec7592d",
+      "title": "Weekly refresh",
+      "transitions": [],
+      "file": "job_weekly_refresh.py",
+      "schedule": "0 0 * * 6"
     }
   ],
   "hooks": [],
   "forms": [
     {
-      "id": "00ad5f2a-cebd-4a9e-bdf7-bcb651053a81",
-      "path": "retrieve-a-secret",
-      "title": "Retrieve a secret",
-      "is_initial": true,
-      "auto_start": false,
-      "allow_restart": false,
-      "end_message": null,
-      "start_message": null,
-      "error_message": null,
-      "welcome_title": null,
-      "timeout_message": null,
-      "start_button_text": null,
-      "restart_button_text": null,
-      "file": "form_retrieve_a_secret.py",
       "workflow_position": [
         555.0,
         660.0
       ],
+      "id": "00ad5f2a-cebd-4a9e-bdf7-bcb651053a81",
+      "title": "Retrieve a secret",
       "transitions": [],
+      "file": "form_retrieve_a_secret.py",
       "notification_trigger": {
         "variable_name": "assignee_emails",
         "enabled": false
       },
+      "start_button_text": null,
+      "path": "retrieve-a-secret",
+      "welcome_title": null,
+      "end_message": null,
       "access_control": {
         "is_public": false,
         "required_roles": []
-      }
+      },
+      "is_initial": true,
+      "allow_restart": false,
+      "restart_button_text": null,
+      "timeout_message": null,
+      "error_message": null,
+      "start_message": null,
+      "auto_start": false
     },
     {
-      "id": "c12fc697-271e-45da-b585-8e7d37f682b9",
-      "path": "store-a-secret",
-      "title": "Store a secret",
-      "is_initial": true,
-      "auto_start": false,
-      "allow_restart": true,
-      "end_message": null,
-      "start_message": null,
-      "error_message": null,
-      "welcome_title": null,
-      "timeout_message": null,
-      "start_button_text": null,
-      "restart_button_text": null,
-      "file": "form_store_a_credential.py",
       "workflow_position": [
         555.0,
         525.0
       ],
+      "id": "c12fc697-271e-45da-b585-8e7d37f682b9",
+      "title": "Store a secret",
       "transitions": [],
+      "file": "form_store_a_credential.py",
       "notification_trigger": {
         "variable_name": "assignee_emails",
         "enabled": false
       },
+      "start_button_text": null,
+      "path": "store-a-secret",
+      "welcome_title": null,
+      "end_message": null,
       "access_control": {
         "is_public": false,
         "required_roles": []
-      }
+      },
+      "is_initial": true,
+      "allow_restart": true,
+      "restart_button_text": null,
+      "timeout_message": null,
+      "error_message": null,
+      "start_message": null,
+      "auto_start": false
     },
     {
-      "id": "aa7a0d55-ea7e-46b5-ad8d-effc45f58518",
-      "path": "manual-refresh",
-      "title": "Manual refresh",
-      "is_initial": true,
-      "auto_start": false,
-      "allow_restart": false,
-      "end_message": "A new key was generated",
-      "start_message": null,
-      "error_message": null,
-      "welcome_title": null,
-      "timeout_message": null,
-      "start_button_text": "Refresh key",
-      "restart_button_text": null,
-      "file": "form_manual_refresh.py",
       "workflow_position": [
         810.0,
         585.0
       ],
+      "id": "aa7a0d55-ea7e-46b5-ad8d-effc45f58518",
+      "title": "Manual refresh",
       "transitions": [],
+      "file": "form_manual_refresh.py",
       "notification_trigger": {
         "variable_name": "assignee_emails",
         "enabled": false
       },
+      "start_button_text": "Refresh key",
+      "path": "manual-refresh",
+      "welcome_title": null,
+      "end_message": "A new key was generated",
       "access_control": {
         "is_public": false,
         "required_roles": []
-      }
+      },
+      "is_initial": true,
+      "allow_restart": false,
+      "restart_button_text": null,
+      "timeout_message": null,
+      "error_message": null,
+      "start_message": null,
+      "auto_start": false
     }
   ],
   "scripts": [],
-  "agents": [],
-  "clients": [],
-  "version": "13.0"
+  "version": "15.0"
 }
