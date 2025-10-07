@@ -39,18 +39,23 @@ def page_edit_secret(state):
     
     is_editing = cred is not None
     
+    # Pre-fill state with existing values if editing
+    if is_editing and cred:
+        if "name" not in state:
+            state["name"] = cred["name"]
+        if "login" not in state:
+            state["login"] = cred["public_part"]
+    
     widgets = [
         MarkdownOutput(f"### {'Editar Segredo' if is_editing else 'Novo Segredo'}"),
         TextInput(
             "Identificador", 
-            key="name", 
-            value=cred["name"] if cred else "",
+            key="name",
             hint="Nome do serviço. Ex: Webflow, Gmail, Stripe"
         ),
         TextInput(
             "Parte pública", 
-            key="login", 
-            value=cred["public_part"] if cred else "",
+            key="login",
             hint="Login, email ou identificador público. Ex: design@abstra.app"
         ),
         PasswordInput(
