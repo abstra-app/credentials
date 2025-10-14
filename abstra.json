@@ -21,7 +21,7 @@
       "transitions": [],
       "id": "4402e439-3498-434a-ab21-46549ec7592d",
       "workflow_position": [
-        735,
+        660,
         420
       ],
       "file": "job_weekly_refresh.py",
