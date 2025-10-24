@@ -1,124 +1,115 @@
 {
-  "workspace": {
-    "name": "Workspace",
-    "language": "en",
-    "theme": null,
-    "logo_url": "./logo.png",
-    "favicon_url": "./favicon.ico",
-    "brand_name": "Abstra Project",
-    "main_color": null,
-    "font_family": null,
-    "font_color": null
-  },
+  "forms": [
+    {
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      },
+      "auto_start": false,
+      "end_message": null,
+      "error_message": null,
+      "file": "form_retrieve_a_secret.py",
+      "id": "00ad5f2a-cebd-4a9e-bdf7-bcb651053a81",
+      "is_initial": true,
+      "notification_trigger": {
+        "enabled": false,
+        "variable_name": "assignee_emails"
+      },
+      "path": "retrieve-a-secret",
+      "start_button_text": null,
+      "start_message": null,
+      "timeout_message": null,
+      "title": "Retrieve a secret",
+      "transitions": [],
+      "workflow_position": [
+        465,
+        705
+      ]
+    },
+    {
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      },
+      "auto_start": false,
+      "end_message": null,
+      "error_message": null,
+      "file": "form_store_a_credential.py",
+      "id": "c12fc697-271e-45da-b585-8e7d37f682b9",
+      "is_initial": true,
+      "notification_trigger": {
+        "enabled": false,
+        "variable_name": "assignee_emails"
+      },
+      "path": "store-a-secret",
+      "start_button_text": null,
+      "start_message": null,
+      "timeout_message": null,
+      "title": "Store a secret",
+      "transitions": [],
+      "workflow_position": [
+        555,
+        525
+      ]
+    },
+    {
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      },
+      "auto_start": false,
+      "end_message": "A new key was generated",
+      "error_message": null,
+      "file": "form_manual_refresh.py",
+      "id": "aa7a0d55-ea7e-46b5-ad8d-effc45f58518",
+      "is_initial": true,
+      "notification_trigger": {
+        "enabled": false,
+        "variable_name": "assignee_emails"
+      },
+      "path": "manual-refresh",
+      "start_button_text": "Refresh key",
+      "start_message": null,
+      "timeout_message": null,
+      "title": "Manual refresh",
+      "transitions": [],
+      "workflow_position": [
+        810,
+        585
+      ]
+    }
+  ],
   "home": {
     "access_control": {
       "is_public": false,
       "required_roles": []
     }
   },
+  "hooks": [],
   "jobs": [
     {
-      "transitions": [],
+      "file": "job_weekly_refresh.py",
       "id": "4402e439-3498-434a-ab21-46549ec7592d",
+      "schedule": "0 0 * * 6",
+      "title": "Weekly refresh",
+      "transitions": [],
       "workflow_position": [
         735,
         420
-      ],
-      "file": "job_weekly_refresh.py",
-      "title": "Weekly refresh",
-      "schedule": "0 0 * * 6"
-    }
-  ],
-  "hooks": [],
-  "forms": [
-    {
-      "transitions": [],
-      "id": "00ad5f2a-cebd-4a9e-bdf7-bcb651053a81",
-      "workflow_position": [
-        555,
-        660
-      ],
-      "file": "form_retrieve_a_secret.py",
-      "title": "Retrieve a secret",
-      "path": "retrieve-a-secret",
-      "restart_button_text": null,
-      "start_message": null,
-      "allow_restart": false,
-      "end_message": null,
-      "start_button_text": null,
-      "timeout_message": null,
-      "access_control": {
-        "is_public": false,
-        "required_roles": []
-      },
-      "auto_start": false,
-      "is_initial": true,
-      "error_message": null,
-      "notification_trigger": {
-        "variable_name": "assignee_emails",
-        "enabled": false
-      },
-      "welcome_title": null
-    },
-    {
-      "transitions": [],
-      "id": "c12fc697-271e-45da-b585-8e7d37f682b9",
-      "workflow_position": [
-        555,
-        525
-      ],
-      "file": "form_store_a_credential.py",
-      "title": "Store a secret",
-      "path": "store-a-secret",
-      "restart_button_text": null,
-      "start_message": null,
-      "allow_restart": true,
-      "end_message": null,
-      "start_button_text": null,
-      "timeout_message": null,
-      "access_control": {
-        "is_public": false,
-        "required_roles": []
-      },
-      "auto_start": false,
-      "is_initial": true,
-      "error_message": null,
-      "notification_trigger": {
-        "variable_name": "assignee_emails",
-        "enabled": false
-      },
-      "welcome_title": null
-    },
-    {
-      "transitions": [],
-      "id": "aa7a0d55-ea7e-46b5-ad8d-effc45f58518",
-      "workflow_position": [
-        810,
-        585
-      ],
-      "file": "form_manual_refresh.py",
-      "title": "Manual refresh",
-      "path": "manual-refresh",
-      "restart_button_text": null,
-      "start_message": null,
-      "allow_restart": false,
-      "end_message": "A new key was generated",
-      "start_button_text": "Refresh key",
-      "timeout_message": null,
-      "access_control": {
-        "is_public": false,
-        "required_roles": []
-      },
-      "auto_start": false,
-      "is_initial": true,
-      "error_message": null,
-      "notification_trigger": {
-        "variable_name": "assignee_emails",
-        "enabled": false
-      },
-      "welcome_title": null
+      ]
     }
   ],
   "scripts": [],
-  "version": "15.0"
+  "version": "15.0",
+  "workspace": {
+    "brand_name": "Abstra Project",
+    "favicon_url": "./favicon.ico",
+    "font_color": null,
+    "font_family": null,
+    "language": "en",
+    "logo_url": "./logo.png",
+    "main_color": null,
+    "name": "Workspace",
+    "theme": null
+  }
 }

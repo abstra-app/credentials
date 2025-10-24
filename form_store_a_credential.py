@@ -155,6 +155,6 @@ elif action == "save":
             encrypted_secret = fernet.encrypt(secret.encode()).decode()
             update_values["private_part_enc"] = encrypted_secret
         
-        update("credentials", where={"id": selected_id}, values=update_values)
+        update("credentials", where={"id": selected_id}, set=update_values)
         print(f"Credential {selected_id} updated successfully")
         run([lambda _: [MarkdownOutput("✅ **Segredo atualizado com sucesso!**")]])

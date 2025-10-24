@@ -1,2 +1,2 @@
-abstra==3.24.1
+abstra==3.24.8.dev0
 cryptography==41.0.7
