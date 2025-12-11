@@ -1,5 +1,4 @@
 {
-  "components": [],
   "forms": [
     {
       "access_control": {
@@ -11,13 +10,11 @@
       "error_message": null,
       "file": "form_retrieve_a_secret.py",
       "id": "00ad5f2a-cebd-4a9e-bdf7-bcb651053a81",
-      "input": false,
       "is_initial": true,
       "notification_trigger": {
         "enabled": false,
         "variable_name": "assignee_emails"
       },
-      "output": false,
       "path": "retrieve-a-secret",
       "start_button_text": null,
       "start_message": null,
@@ -25,8 +22,8 @@
       "title": "Retrieve a secret",
       "transitions": [],
       "workflow_position": [
-        555,
-        660
+        465,
+        705
       ]
     },
     {
@@ -39,13 +36,11 @@
       "error_message": null,
       "file": "form_store_a_credential.py",
       "id": "c12fc697-271e-45da-b585-8e7d37f682b9",
-      "input": false,
       "is_initial": true,
       "notification_trigger": {
         "enabled": false,
         "variable_name": "assignee_emails"
       },
-      "output": false,
       "path": "store-a-secret",
       "start_button_text": null,
       "start_message": null,
@@ -67,13 +62,11 @@
       "error_message": null,
       "file": "form_manual_refresh.py",
       "id": "aa7a0d55-ea7e-46b5-ad8d-effc45f58518",
-      "input": false,
       "is_initial": true,
       "notification_trigger": {
         "enabled": false,
         "variable_name": "assignee_emails"
       },
-      "output": false,
       "path": "manual-refresh",
       "start_button_text": "Refresh key",
       "start_message": null,
@@ -97,19 +90,17 @@
     {
       "file": "job_weekly_refresh.py",
       "id": "4402e439-3498-434a-ab21-46549ec7592d",
-      "input": false,
-      "output": false,
       "schedule": "0 0 * * 6",
       "title": "Weekly refresh",
       "transitions": [],
       "workflow_position": [
-        660,
+        735,
         420
       ]
     }
   ],
   "scripts": [],
-  "version": "17.0",
+  "version": "15.0",
   "workspace": {
     "brand_name": "Abstra Project",
     "favicon_url": "./favicon.ico",
